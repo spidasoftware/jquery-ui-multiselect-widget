@@ -409,7 +409,7 @@ $.widget("ech.multiselect", {
 		}
 		
 		// set widths
-		this.button.width( width );
+		this.button.css('min-width', width);
 	},
 	
 	// set menu width
@@ -421,7 +421,7 @@ $.widget("ech.multiselect", {
 				parseInt(m.css('border-right-width'),10)-
 				parseInt(m.css('border-left-width'),10);
 				
-		m.width( width || this.button.outerWidth() );
+		m.css('min-width', width || this.button.outerWidth() );
 	},
 	
 	// move up or down within the menu
